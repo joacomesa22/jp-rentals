@@ -1,0 +1,55 @@
+---
+import '@fontsource-variable/montserrat';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/700.css';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root{
+		--blueGradient:  linear-gradient(to right top, #003566, #002f5b, #002951, #002347, #001d3d);
+		--yellowGradient:  linear-gradient(to right top, #ffd60a, #ffd106, #ffcc03, #ffc801, #ffc300);
+		--grayGradient:  linear-gradient(to right top, #f2f2f2, #efefef, #ececec, #eaeaea, #e7e7e7);
+		--darkest: #000814;
+        --lightGray: #f2f2f2;
+        --gray: #e7e7e7;
+        --lightBlue: #003566;
+        --darkBlue: #001D3D;
+        --lightYellow: #FFD60A;
+        --darkYellow: #FFC300;
+	}
+	body{
+		background: var(--grayGradient);
+	}
+	html{
+		font-family: "Montserrat";
+	}
+	.wrapper{
+		max-width: 1400px;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+</style>
