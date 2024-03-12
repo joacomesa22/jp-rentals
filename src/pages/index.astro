@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from "../components/Header"
-import HeroHome from "../sections/HeroHome.astro";
+import HeroHome from "../sections/home/HeroHome.astro";
+import Frase from '../sections/home/Frase.astro';
 ---
 
 <Layout title="JP Rentals" description="JP Description">
 	<Header client:load/>
-	<HeroHome/>
+	<main>
+		<HeroHome/>
+		<Frase/>
+	</main>
 </Layout>
 
