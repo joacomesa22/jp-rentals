@@ -6,3 +6,5 @@ export const yellowGradient =
 
 export const grayGradient =
   "bg-[linear-gradient(to_right_top,_#f2f2f2,_#efefef,_#ececec,_#eaeaea,_#e7e7e7)]";
+
+export const wrapper = "max-w-[1200px]";

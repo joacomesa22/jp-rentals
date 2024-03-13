@@ -1,0 +1,13 @@
+---
+import StatComponent from "../../components/StatComponent.astro";
+import {blueGradient} from "../../styles/styling"
+---
+
+<section class=`${blueGradient} flex justify-center items-center p-10`>
+    <div class="max-w-[1000px] flex justify-between items-center w-full">
+       <StatComponent num="19" text="Unidades Disponibles"/>
+       <StatComponent num="+300" text="Valoraciones 5 Estrellas"/>
+       <StatComponent num="+400" text="Clientes Satisfechos"/>
+       <StatComponent num="48" text="Algo mas"/>
+    </div>
+</section>

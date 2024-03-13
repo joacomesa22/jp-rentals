@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <header
       id="navbar"
-      className="flex justify-between items-center p-4 z-10 fixed w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2"
+      className="flex justify-between items-center p-4 fixed w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 z-40"
     >
       <div className="hover:scale-105 duration-300">
         <a href="/">JP</a>
