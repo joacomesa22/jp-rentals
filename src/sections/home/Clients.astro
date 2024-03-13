@@ -1,6 +1,16 @@
 ---
+import ClientCard from "../../components/ClientCard.astro"
 import Title from "../../components/Title.astro"
+import { wrapper } from "../../styles/styling"
 ---
 <section class="pt-32 pb-20 flex justify-center items-center">
-    <Title title="Clientes Satisfechos" text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, itaque!" />
+    <div class=`flex flex-col justify-center items-center w-full ${wrapper} gap-16`>
+        <Title title="Clientes Satisfechos" text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, itaque!" />
+        <div class="flex justify-between items-center w-full">
+            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" from="Buenos Aires"/>
+            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" from="Buenos Aires"/>
+            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" from="Buenos Aires"/>
+            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" from="Buenos Aires"/>
+        </div>
+    </div>
 </section>
