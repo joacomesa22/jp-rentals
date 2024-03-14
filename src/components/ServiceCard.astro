@@ -3,12 +3,12 @@ const {title, text} = Astro.props
 
 ---
 
-<article class="relative bg-white text-darkest flex items-center justify-center  p-10 rounded-md border border-darkest">
+<article class="relative bg-[var(--white)] text-[var(--darkest)] flex items-center justify-center  p-10 rounded-md border border-[var(--darkest)]">
     <div>
         <h4 class="font-bold text-xl">{title}</h4>
         <p>{text}</p>
     </div>
     <img src="./assets/icons/telefono.svg" alt="">
     
-    <div class="absolute -bottom-3 -left-3 -z-10 p-10 w-full h-full bg-white rounded-md border border-darkest"></div>
+    <div class="absolute -bottom-3 -left-3 -z-10 p-10 w-full h-full bg-[var(--white)] rounded-md border border-[var(--darkest)]"></div>
 </article>

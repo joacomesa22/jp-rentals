@@ -15,7 +15,7 @@ const DptoCard = () => {
   //     );
   //   }, []);
   return (
-    <article className="relative group max-w-[380px] rounded-sm overflow-hidden group bg-white">
+    <article className="relative group max-w-[380px] rounded-md overflow-hidden group bg-[var(--white)]">
       <a href="https://www.google.com/" target="_blank">
         <div className="relative h-full group-hover:h-[90%] transition-all z-10">
           <div className="absolute w-full h-full bg-gradient-to-t from-black/60"></div>
@@ -29,7 +29,7 @@ const DptoCard = () => {
             <p className="text-sm">Recoleta</p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-4 text-black w-full h-[10%]">
+        <div className="flex items-center justify-center gap-4 text-[var(--darkest)] w-full h-[10%] font-bold">
           <p>Hola</p>
           <p>Chau</p>
           <p>Caca</p>

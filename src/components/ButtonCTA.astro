@@ -36,7 +36,7 @@ const { as: Tag, class: className, ...props } = Astro.props
 		inset: -2px;
 		background: #fff;
 		transform: scaleX(0);
-		transform-origin: right; /* To end from left to right */
+		transform-origin: right;
         border-radius: 6px;
 	}
 	
@@ -47,7 +47,7 @@ const { as: Tag, class: className, ...props } = Astro.props
 
 	.button-style:hover::before {
 		transform: scaleX(1);
-		transform-origin: left; /* To start from left to right */
+		transform-origin: left;
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -60,14 +60,14 @@ const { as: Tag, class: className, ...props } = Astro.props
 			transition: transform 0.3s ease-in;
 		}
 
-		/* Added delay to simulate a hover attempt */
+
 		.button-style:hover {
 			transition:
 				color 0.15s ease-out 0.1s,
 				scale 0.15s ease-out 0.1s;
 		}
 
-		/* Added delay to simulate a hover attempt */
+
 		.button-style:hover::before {
 			transition: transform 0.3s ease-out 0.1s;
 		}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { wrapper } from "../styles/styling";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -10,7 +11,7 @@ const NavBar = () => {
   return (
     <header
       id="navbar"
-      className="flex justify-between items-center p-4 fixed w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 z-40"
+      className={`flex justify-between items-center p-4 fixed w-full ${wrapper} md:left-1/2 md:-translate-x-1/2 z-40`}
     >
       <div className="hover:scale-105 duration-300">
         <a href="/">JP</a>
@@ -47,11 +48,11 @@ const NavBar = () => {
       <div
         className={
           !nav
-            ? "fixed left-[-100%] top-0 h-full w-[60%] border-r border-r-colorBlue bg-colorDark flex flex-col items-center justify-around z-10"
-            : "fixed left-0 top-0 h-full w-[60%] border-r border-r-colorBlue bg-colorDark ease-in-out duration-500 flex flex-col items-center justify-around z-10"
+            ? "fixed left-[-100%] top-0 h-full w-[60%] border-r border-r-[var(--lightBlue)] bg-[var(--darkest)] flex flex-col items-center justify-around z-10"
+            : "fixed left-0 top-0 h-full w-[60%] border-r border-r-[var(--lightBlue)] bg-[var(--darkest)] ease-in-out duration-500 flex flex-col items-center justify-around z-10"
         }
       >
-        <ul className="flex flex-col gap-8 items-center bg-colorDark">
+        <ul className="flex flex-col gap-8 items-center bg-[var(--darkest)]">
           <li className="p-4">
             <a href="#skillset" className="navLink" onClick={handleNav}>
               Nuestras Unidades
