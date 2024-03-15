@@ -1,0 +1,6 @@
+---
+const {link, imgSrc, class: className} = Astro.props
+---
+<a href={link} class:list={["p-2 w-max rounded-md flex justify-center items-center", className]} target="_blank">
+    <img src={imgSrc} alt="logo" class="max-w-[24px]">
+</a>
