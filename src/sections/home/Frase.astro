@@ -1,6 +1,7 @@
 ---
 import {blueGradient, wrapper} from "../../styles/styling"
-import DptoCard from "../../components/DptoCard"
+import DeptoCard from "../../components/DeptoCard"
+import {deptos} from "../../deptos"
 ---
 <section class=`${blueGradient} flex flex-col justify-center items-center pt-16 pb-48 relative`>
     <div class="flex flex-col items-center gap-1 max-w-[800px]">
@@ -9,8 +10,6 @@ import DptoCard from "../../components/DptoCard"
         <p class="text-center text-balance">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam dolores tempora perferendis sed a aut consectetur repellat, deleniti repudiandae reiciendis laudantium porro laborum nam aliquid ipsa et praesentium debitis? Dolores neque ad voluptates distinctio pariatur deserunt aspernatur, similique consectetur perferendis a rerum aut omnis laboriosam nemo sed, possimus minus sapiente!</p>
     </div>
     <div class=`absolute -bottom-40 flex justify-between w-full ${wrapper}`>
-        <DptoCard/>
-        <DptoCard/>
-        <DptoCard/>
+        {deptos.slice(0, 3).map(depto => <DeptoCard depto={depto} client:load/>)}
     </div>
 </section>

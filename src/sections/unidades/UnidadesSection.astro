@@ -1,0 +1,10 @@
+---
+import {wrapper} from "../../styles/styling"
+import {deptos} from "../../deptos"
+import DeptoCard from "../../components/DeptoCard"
+---
+<section class="flex justify-center items-center py-32">
+    <div class=`flex justify-between flex-wrap w-full ${wrapper}`>
+        {deptos.map(depto => <DeptoCard depto={depto} client:load/>)}
+    </div>
+</section>

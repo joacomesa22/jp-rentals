@@ -18,7 +18,7 @@ const NavBar = () => {
       </div>
       <ul className="hidden sm:flex gap-8">
         <li className="">
-          <a href="#" className="">
+          <a href="/nuestras-unidades" className="">
             Nuestras Unidades
           </a>
         </li>
