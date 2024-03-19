@@ -1,0 +1,31 @@
+---
+import type { GetStaticPaths } from "astro";
+import {deptos} from "../../deptos"
+import { wrapper } from "../../styles/styling";
+import Layout from "../../layouts/Layout.astro"
+import DeptoInfo from "../../sections/departamento/DeptoInfo.astro"
+import AirbnbBtn from "../../components/AirbnbBtn.astro";
+
+const {id} = Astro.params
+let depto
+
+if(id){
+    depto = deptos.find(depto => depto.id == id)
+}
+
+export const getStaticPaths = (() => {
+    return deptos.map((depto) => ({ 
+        params: {id: depto.id}
+     }))
+}) satisfies GetStaticPaths;
+---
+
+<Layout title="JP Rentals - Departamento" description="JP Description">
+    <!-- Slider -->
+    <section class="flex justify-center items-center">
+        <div class=`${wrapper} grid grid-cols-3 gap-4 w-full`>
+            <DeptoInfo depto={depto}/>
+            <AirbnbBtn>
+        </div>
+    </section>
+</Layout>

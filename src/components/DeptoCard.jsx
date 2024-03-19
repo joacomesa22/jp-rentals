@@ -4,8 +4,8 @@ import { storage } from "../firebase";
 import { useEffect, useState } from "react";
 
 const DeptoCard = ({ depto }) => {
-  const { title, barrio, details, imgCode } = depto;
-  const imgListRef = ref(storage, `${imgCode}`);
+  const { title, barrio, details, id } = depto;
+  const imgListRef = ref(storage, `${id}`);
   const [imgURL, setImgURL] = useState("");
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const DeptoCard = ({ depto }) => {
   }, []);
   return (
     <article className="relative group max-w-[380px] rounded-md overflow-hidden group bg-[var(--white)]">
-      <a href="https://www.google.com/" target="_blank">
+      <a href={`/departamento/${id}`}>
         <div className="relative h-full group-hover:h-[90%] transition-all z-10">
           <div className="absolute w-full h-full bg-gradient-to-t from-black/60"></div>
           <img
@@ -30,7 +30,7 @@ const DeptoCard = ({ depto }) => {
             <p className="text-sm">{barrio}</p>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-4 text-[var(--darkest)] w-full h-[10%] text-sm">
+        <div className="flex items-center justify-center gap-4 text-[var(--darkest)] w-full h-[10%] text-sm bg-[var(--lightYellow)]">
           <p>{details.dorms} Dormitorios</p>
           <p>{details.banos} Baños</p>
           <p>{details.huespedes} Huespedes</p>
