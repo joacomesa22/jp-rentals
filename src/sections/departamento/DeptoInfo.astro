@@ -2,12 +2,18 @@
 import DivEffect from "../../components/DivEffect.astro"
 const {depto} = Astro.props
 ---
-<DivEffect as="div" class="col-span-2 p-10">
-    <h2>{depto.title}</h2>
-    <!-- Details -->
-    <h4>{depto.barrio}</h4>
-    <p>{depto.description}</p>
-    <!-- Gallery -->
+<DivEffect as="div" class="col-span-2 p-10 flex flex-col gap-12">
+    <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+            <h2 class="text-xl">{depto.title}</h2>
+            <div class="flex items-center gap-[2px]">
+                <svg version="1.0" width="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#231F20" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+                <p class="text-sm">{depto.barrio}</p>
+            </div>
+        </div>
+            <p>{depto.description}</p>
+    </div>
+        <!-- Gallery -->
     <iframe src={depto.location} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
     <div class="absolute -bottom-3 -left-3 -z-10 p-10 w-full h-full bg-[var(--white)] rounded-md border border-[var(--darkest)]"></div>
 </DivEffect>

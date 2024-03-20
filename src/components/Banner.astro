@@ -1,5 +1,5 @@
 ---
-const {title, text} = Astro.props
+const {title, text, link} = Astro.props
 import ArrowLink from "../components/ArrowLink.astro"
 ---
 <div class=`imgBg px-20 py-24 rounded-md customShadow`>
@@ -8,7 +8,7 @@ import ArrowLink from "../components/ArrowLink.astro"
             <h3 class="text-4xl font-bold">{title}</h3>
             <p class="max-w-[300px] text-sm">{text}</p>
         </div>
-        <ArrowLink link="https://www.google.com/">Ver Unidades</ArrowLink>
+        <ArrowLink link={link}>Ver Unidades</ArrowLink>
     </div>
 </div>
 
