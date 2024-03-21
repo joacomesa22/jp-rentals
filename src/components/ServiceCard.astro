@@ -1,6 +1,6 @@
 ---
 import DivEffect from "./DivEffect.astro"
-const {title, text} = Astro.props
+const {title, text, img} = Astro.props
 ---
 
 <DivEffect as="article" class="flex items-center justify-center p-10">
@@ -8,5 +8,5 @@ const {title, text} = Astro.props
         <h4 class="font-bold text-xl">{title}</h4>
         <p>{text}</p>
     </div>
-    <img src="./assets/icons/telefono.svg" alt="">
+    <img src={img} alt="Icon">
 </DivEffect>

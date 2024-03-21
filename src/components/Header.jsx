@@ -23,17 +23,17 @@ const NavBar = () => {
           </a>
         </li>
         <li className="">
-          <a href="#" className="">
+          <a href="/nosotros" className="">
             Nosotros
           </a>
         </li>
         <li className="">
-          <a href="#" className="">
+          <a href="/como-funciona" className="">
             Cómo Funciona
           </a>
         </li>
         <li className="">
-          <a href="#" className="">
+          <a href="/contacto" className="">
             Contacto
           </a>
         </li>
@@ -54,22 +54,26 @@ const NavBar = () => {
       >
         <ul className="flex flex-col gap-8 items-center bg-[var(--darkest)]">
           <li className="p-4">
-            <a href="#skillset" className="navLink" onClick={handleNav}>
+            <a
+              href="/nuestras-unidades"
+              className="navLink"
+              onClick={handleNav}
+            >
               Nuestras Unidades
             </a>
           </li>
           <li className="p-4">
-            <a href="#projects" className="navLink" onClick={handleNav}>
+            <a href="/nosotros" className="navLink" onClick={handleNav}>
               Nosotros
             </a>
           </li>
           <li className="p-4">
-            <a href="#about" className="navLink" onClick={handleNav}>
+            <a href="/como-funciona" className="navLink" onClick={handleNav}>
               Cómo Funciona
             </a>
           </li>
           <li className="p-4">
-            <a href="#contact" className="navLink" onClick={handleNav}>
+            <a href="/contacto" className="navLink" onClick={handleNav}>
               Contacto
             </a>
           </li>

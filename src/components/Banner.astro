@@ -1,28 +1,19 @@
 ---
-const {title, text, link} = Astro.props
+const {title, text, link, linkText, img} = Astro.props
 import ArrowLink from "../components/ArrowLink.astro"
 ---
-<div class=`imgBg px-20 py-24 rounded-md customShadow`>
-    <div class="flex flex-col gap-4">
-        <div class="flex flex-col gap-2">
-            <h3 class="text-4xl font-bold">{title}</h3>
-            <p class="max-w-[300px] text-sm">{text}</p>
-        </div>
-        <ArrowLink link={link}>Ver Unidades</ArrowLink>
-    </div>
-</div>
-
-<style>
-    .imgBg{
-     background-image: linear-gradient(
+<div class=`px-20 py-24 rounded-md customShadow bg-center` style={{
+    backgroundImage: `linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
-        ),
-      url(./assets/img/apartment2.jpg);
-      background-position: center;
-    }
-    .h3{
-        font-family: "Poppins", "Helvetica";
-    }
-</style>
+        ), url(${img})`
+  }}>
+    <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+            <h2 class="text-4xl font-bold">{title}</h2>
+            <p class="max-w-[300px] text-sm">{text}</p>
+        </div>
+        <ArrowLink link={link}>{linkText}</ArrowLink>
+    </div>
+</div>

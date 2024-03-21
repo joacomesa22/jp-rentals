@@ -1,0 +1,35 @@
+---
+import { wrapper } from "../../styles/styling";
+import Title from "../../components/Title.astro"
+import TeamCard from "../../components/TeamCard.astro";
+
+const MEMBERS = [
+    {
+        name: "Pedro Ferraro",
+        data: "Buenos Aires",
+        img: "./assets/img/pepe.jpeg"
+    },
+    {
+        name: "Hermano Ferraro",
+        data: "Buenos Aires",
+        img: "./assets/img/pepe.jpeg"
+    },
+    {
+        name: "El Otro Pana",
+        data: "Chascomús",
+        img: "./assets/img/pepe.jpeg"
+    },
+]
+
+---
+
+<section class="pt-24 flex justify-center items-center">
+    <div class=`${wrapper} flex flex-col gap-16 justify-center items-center`>
+        <Title title="El Equipo" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aperiam!"/>
+        <div class="flex justify-between gap-8 w-full">
+            {MEMBERS.map(member => {
+                return <TeamCard name={member.name} data={member.data} img={member.img}/>
+            })}
+            </div>
+    </div>
+</section>

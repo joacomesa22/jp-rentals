@@ -26,7 +26,7 @@ const DeptoCard = ({ depto }) => {
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-3 left-3">
-            <h4 className="font-bold text-l">{title}</h4>
+            <h4 className="font-bold">{title}</h4>
             <p className="text-sm">{barrio}</p>
           </div>
         </div>

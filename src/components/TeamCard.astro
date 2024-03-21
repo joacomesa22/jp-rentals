@@ -1,0 +1,17 @@
+---
+const {name, data, img} = Astro.props
+---
+<article class="relative max-w-[380px] rounded-md overflow-hidden bg-[var(--white)]">
+      <div class="relative h-full transition-all z-10">
+        <div class="absolute w-full h-full bg-gradient-to-t from-black/60"></div>
+        <img
+          src={img}
+          alt="Imaageeen"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 text-center w-full">
+          <h4 class="font-bold text-2xl">{name}</h4>
+          <p class="text-sm">{data}</p>
+        </div>
+      </div>
+  </article>

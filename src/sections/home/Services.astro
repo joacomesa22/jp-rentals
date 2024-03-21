@@ -2,15 +2,39 @@
 import Title from "../../components/Title.astro"
 import ServiceCard from "../../components/ServiceCard.astro"
 import { wrapper } from "../../styles/styling"
+
+const SERVICES = [
+    {
+        name: "Atención Personalizada",
+        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
+        img: "./assets/icons/telefono.svg"
+    },
+    {
+        name: "Traslado Premium",
+        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
+        img: "./assets/icons/telefono.svg"
+    },
+    {
+        name: "Correo Electrónico",
+        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
+        img: "./assets/icons/telefono.svg"
+    },
+    {
+        name: "Confianza Pura",
+        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
+        img: "./assets/icons/telefono.svg"
+    },
+
+]
+
 ---
 <section class="pt-64 pb-32 flex justify-center items-center">
     <div class=`${wrapper} flex flex-col gap-16 justify-center items-center`>
         <Title title="Servicios" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aperiam!"/>
         <div class="grid grid-cols-2 place-items-center gap-10">
-            <ServiceCard title="Atención Personalizada" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!"/>
-            <ServiceCard title="Atención Personalizada" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!"/>
-            <ServiceCard title="Atención Personalizada" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!"/>
-            <ServiceCard title="Atención Personalizada" text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!"/>
+            {SERVICES.map(serv => {
+                return <ServiceCard title={serv.name} text={serv.data} img={serv.img}/>
+            })}
         </div>
     </div>
 </section>
