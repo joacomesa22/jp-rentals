@@ -2,30 +2,7 @@
 import Title from "../../components/Title.astro"
 import ServiceCard from "../../components/ServiceCard.astro"
 import { wrapper } from "../../styles/styling"
-
-const SERVICES = [
-    {
-        name: "Atención Personalizada",
-        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
-        img: "./assets/icons/telefono.svg"
-    },
-    {
-        name: "Traslado Premium",
-        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
-        img: "./assets/icons/telefono.svg"
-    },
-    {
-        name: "Correo Electrónico",
-        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
-        img: "./assets/icons/telefono.svg"
-    },
-    {
-        name: "Confianza Pura",
-        data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, atque!",
-        img: "./assets/icons/telefono.svg"
-    },
-
-]
+import {SERVICES} from "../../consts/services"
 
 ---
 <section class="pt-64 pb-32 flex justify-center items-center">

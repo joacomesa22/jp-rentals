@@ -2,35 +2,7 @@
 import ClientCard from "../../components/ClientCard.astro"
 import Title from "../../components/Title.astro"
 import { wrapper } from "../../styles/styling"
-
-const CLIENTS = [
-    {
-        author: "Marco Ferrari",
-        comment: "Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur.",
-        img: "./assets/img/testimonial.jpg",
-        city: "Buenos Aires"
-    },
-    {
-        author: "Cala Campero",
-        comment: "Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur.",
-        img: "./assets/img/testimonial.jpg",
-        city: "Buenos Aires"
-    },
-    {
-        author: "Joaquín Mesa",
-        comment: "Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur.",
-        img: "./assets/img/testimonial.jpg",
-        city: "Buenos Aires"
-    },
-    {
-        author: "Rosario Alonso",
-        comment: "Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur.",
-        img: "./assets/img/testimonial.jpg",
-        city: "Pergamino"
-    },
-
-]
-
+import {CLIENTS} from "../../consts/clients"
 ---
 
 
@@ -38,10 +10,6 @@ const CLIENTS = [
     <div class=`flex flex-col justify-center items-center w-full ${wrapper} gap-16`>
         <Title title="Clientes Satisfechos" text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, itaque!" />
         <div class="flex justify-between items-center w-full">
-            <!-- <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" city="Buenos Aires"/>
-            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" city="Buenos Aires"/>
-            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" city="Buenos Aires"/>
-            <ClientCard text="Lorem ipsum dolor sit amet consectetur. Dolor sit amet consectetur. " autor="Marco Ferrari" city="Buenos Aires"/> -->
             {CLIENTS.map(client => {
                 return <ClientCard author={client.author} comment={client.comment} city={client.city} img={client.img}/>
             })}

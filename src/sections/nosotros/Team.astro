@@ -2,25 +2,7 @@
 import { wrapper } from "../../styles/styling";
 import Title from "../../components/Title.astro"
 import TeamCard from "../../components/TeamCard.astro";
-
-const MEMBERS = [
-    {
-        name: "Pedro Ferraro",
-        data: "Buenos Aires",
-        img: "./assets/img/pepe.jpeg"
-    },
-    {
-        name: "Hermano Ferraro",
-        data: "Buenos Aires",
-        img: "./assets/img/pepe.jpeg"
-    },
-    {
-        name: "El Otro Pana",
-        data: "Chascomús",
-        img: "./assets/img/pepe.jpeg"
-    },
-]
-
+import {MEMBERS} from "../../consts/team"
 ---
 
 <section class="pt-24 flex justify-center items-center">
