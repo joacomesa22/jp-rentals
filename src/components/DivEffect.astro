@@ -5,7 +5,7 @@ type Props<Tag extends HTMLTag> = Polymorphic<{as: Tag}>
 
 const {as: Tag, class: className} = Astro.props
 ---
-<Tag class:list={["relative bg-[var(--white)] text-[var(--darkest)] rounded-md border border-[var(--darkest)]", className]}>
+<Tag class:list={["relative text-[var(--darkest)] rounded-md border border-[var(--darkest)] bg-[var(--white)]", className]}>
    <slot/>
     <div class="absolute -bottom-3 -left-3 -z-10 w-full h-full bg-[var(--white)] rounded-md border border-[var(--darkest)]"></div>
 </Tag>

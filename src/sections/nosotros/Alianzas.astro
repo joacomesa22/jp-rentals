@@ -1,0 +1,18 @@
+---
+import Title from "../../components/Title.astro"
+import { wrapper } from "../../styles/styling"
+import {ALIANZAS} from "../../consts/alianzas"
+import DivEffect from "../../components/DivEffect.astro"
+---
+<section class="pt-32 flex flex-col justify-center items-center">
+    <div class=`${wrapper} w-full flex flex-col items-center gap-16`>
+        <Title title="Alianzas Estratégicas" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, aperiam!"/>
+        <div class="flex justify-between w-full">
+            {ALIANZAS.map(al => {
+                return (<DivEffect as="div" class="p-6">
+                        <img src={al.img} alt={al.name} class="max-w-[300px]"/>
+                    </DivEffect>)
+            })}
+        </div>
+    </div>  
+</section>
