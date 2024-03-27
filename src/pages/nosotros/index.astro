@@ -1,13 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import EstamosParaVos from "../../sections/nosotros/EstamosParaVos.astro"
-import HeroNosotros from "../../sections/nosotros/HeroNosotros.astro"
 import Team from "../../sections/nosotros/Team.astro"
 import Alianzas from "../../sections/nosotros/Alianzas.astro"
+import Header from "../../components/Header"
+import Hero from "../../components/Hero.astro"
 ---
 
 <Layout title="JP Rentals - Nuestras Unidades" description="JP Description">
-    <HeroNosotros/>
+    <Header client:load/>
+    <Hero img="./assets/img/apartment.jpg" title="Somos JP Rentals" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo nostrum veritatis voluptatem a, dolor nobis voluptates. Nisi, esse. Tempore quibusdam eos praesentium itaque delectus commodi ex impedit sint?"/>
     <Team/>
     <Alianzas/>
     <EstamosParaVos/>

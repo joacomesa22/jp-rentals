@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { wrapper } from "../styles/styling";
 
-const NavBar = () => {
+const NavBar = ({ dark = false, gradient = true }) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -11,33 +11,43 @@ const NavBar = () => {
   return (
     <header
       id="navbar"
-      className={`flex justify-between items-center p-4 fixed w-full ${wrapper} md:left-1/2 md:-translate-x-1/2 z-40`}
+      className={`fixed w-full z-40 ${
+        dark && "text-[var(--darkest)]"
+      } flex justify-center items-center`}
     >
-      <div className="hover:scale-105 duration-300">
-        <a href="/">JP</a>
+      {gradient && (
+        <div className="absolute w-full h-full bg-gradient-to-b from-black/60 -z-10"></div>
+      )}
+
+      <div
+        className={`${wrapper} w-full flex justify-between items-center p-4`}
+      >
+        <div className="hover:scale-105 duration-300">
+          <a href="/">JP</a>
+        </div>
+        <ul className="hidden sm:flex gap-8">
+          <li className="">
+            <a href="/nuestras-unidades" className="">
+              Nuestras Unidades
+            </a>
+          </li>
+          <li className="">
+            <a href="/nosotros" className="">
+              Nosotros
+            </a>
+          </li>
+          <li className="">
+            <a href="/como-funciona" className="">
+              Cómo Funciona
+            </a>
+          </li>
+          <li className="">
+            <a href="/contacto" className="">
+              Contacto
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul className="hidden sm:flex gap-8">
-        <li className="">
-          <a href="/nuestras-unidades" className="">
-            Nuestras Unidades
-          </a>
-        </li>
-        <li className="">
-          <a href="/nosotros" className="">
-            Nosotros
-          </a>
-        </li>
-        <li className="">
-          <a href="/como-funciona" className="">
-            Cómo Funciona
-          </a>
-        </li>
-        <li className="">
-          <a href="/contacto" className="">
-            Contacto
-          </a>
-        </li>
-      </ul>
       <div onClick={handleNav} className="block sm:hidden">
         {!nav ? (
           <img src="./assets/icons/bars.svg" alt="bars" className="w-[40px]" />

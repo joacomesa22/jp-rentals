@@ -1,41 +1,30 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import DivEffect from "../../components/DivEffect.astro"
+import Header from "../../components/Header"
 import {wrapper} from "../../styles/styling"
+import ContactForm from "../../components/ContactForm.astro"
 
 ---
 
 <Layout title="JP Rentals - Contacto" description="JP Description">
+    <Header client:load dark={true} gradient={false}/>
     <section class="min-h-screen flex justify-center py-32">
         <DivEffect as="div" class=`${wrapper} flex w-full`>
             <div class="w-[60%] h-full">
-                <img src="./assets/img/apartment.jpg" alt="Apartment" class="h-full rounded-l-md">
+                <img src="./assets/img/apartment.jpg" alt="Apartment" class="h-full rounded-l-md border-r border-[var(--darkest)] object-cover">
             </div>
-            <div class="flex flex-col w-[40%] p-8">
+            <div class="flex flex-col justify-around w-[40%] p-8">
                 <div>
-                    <h1 class="text-2xl">Contactanos</h1>
-                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos laudantium repellendus exercitationem.</p>
+                    <h1 class="text-3xl font-bold">Contactanos</h1>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
-                <div class="flex flex-col text-sm font-semibold">
+                <div class="flex flex-col text-sm font-semibold text-[var(--darkBlue)]">
                     <span>jprentals@gmail.com</span>
                     <span>+54 11 7389 3344</span>
                     <span>Buenos Aires, Argentina</span>
                 </div>
-                <form action="#">
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre">
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email">
-                    </div>
-                    <div>
-                        <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje"/>
-                    </div>
-                    <input type="submit" value="Enviar">
-                </form>
+                <ContactForm/>
             </div>
         </DivEffect>
     </section>

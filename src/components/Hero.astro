@@ -1,0 +1,16 @@
+---
+import { wrapper } from "../styles/styling"
+const {img, title, text} = Astro.props
+---
+<section class=" min-h-[60vh] flex justify-center items-center bg-center" style={{
+    backgroundImage: `linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ), url(${img})`
+  }}>
+    <div class=`${wrapper} w-full h-full`>
+        <h1 class="text-5xl font-bold">{title}</h1>
+        <p class="text-l max-w-[600px]">{text}</p>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+---
+import DivEffect from "../../components/DivEffect.astro"
+import { wrapper } from "../../styles/styling"
+const {title, text, img, rev = false} = Astro.props
+---
+<section class="py-16 flex justify-center items-center">
+    <div class=`${wrapper} flex ${rev && "flex-row-reverse"} justify-between items-center w-full`>
+        <div class="text-[var(--darkest)] max-w-[600px] flex flex-col gap-1">
+            <h3 class="text-4xl font-bold">{title}</h3>
+            <p class="">{text}</p>
+        </div>
+        <DivEffect as="div" class="max-w-[480px]">
+            <img src={img} alt={title} class="rounded-md">
+        </DivEffect>
+    </div>
+</section>

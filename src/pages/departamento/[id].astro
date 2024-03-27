@@ -6,6 +6,7 @@ import Layout from "../../layouts/Layout.astro"
 import DeptoInfo from "../../sections/departamento/DeptoInfo.astro"
 import AirbnbBtn from "../../components/AirbnbBtn.astro";
 import Slider from "../../components/Slider"
+import Header from "../../components/Header"
 
 const {id} = Astro.params
 let depto
@@ -22,6 +23,7 @@ export const getStaticPaths = (() => {
 ---
 
 <Layout title="JP Rentals - Departamento" description="JP Description">
+    <Header client:load/>
     <Slider client:load id={depto.id}/>
     <section class="flex justify-center items-center py-16">
         <div class=`${wrapper} grid grid-cols-3 gap-8 w-full`>
