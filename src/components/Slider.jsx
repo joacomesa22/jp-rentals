@@ -36,6 +36,7 @@ const Slider = ({ id }) => {
       pagination="true"
       style={{
         "--swiper-navigation-color": "#fff !important",
+        "--swiper-navigation-size": "32px",
         "--swiper-pagination-color": "#fff !important",
       }}
     >

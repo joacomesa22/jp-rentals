@@ -2,6 +2,7 @@
 import {blueGradient, wrapper} from "../../styles/styling"
 import DeptoCard from "../../components/DeptoCard"
 import {deptos} from "../../consts/deptos"
+import DeptoCardSlider from "../../components/DeptoCardSlider"
 ---
 <section class=`${blueGradient} flex flex-col justify-center items-center pt-16 pb-48 relative`>
     <div class="flex flex-col items-center gap-1 max-w-[800px]">
@@ -9,7 +10,7 @@ import {deptos} from "../../consts/deptos"
         <h2 class="text-4xl font-bold">Super Frase Increible</h2>
         <p class="text-center text-balance">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam dolores tempora perferendis sed a aut consectetur repellat, deleniti repudiandae reiciendis laudantium porro laborum nam aliquid ipsa et praesentium debitis? Dolores neque ad voluptates distinctio pariatur deserunt aspernatur, similique consectetur perferendis a rerum aut omnis laboriosam nemo sed, possimus minus sapiente!</p>
     </div>
-    <div class=`absolute -bottom-40 flex justify-between w-full ${wrapper}`>
-        {deptos.slice(0, 3).map(depto => <DeptoCard depto={depto} client:load/>)}
+    <div class=`absolute -bottom-40 ${wrapper}`>
+        <DeptoCardSlider client:load/>
     </div>
 </section>

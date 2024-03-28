@@ -3,12 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 import UnidadesSection from "../../sections/nuestras-unidades/UnidadesSection.astro"
 import Header from "../../components/Header"
 import Hero from '../../components/Hero.astro';
+import Stats from '../../sections/home/Stats.astro';
 
 ---
 
 <Layout title="JP Rentals - Nuestras Unidades" description="JP Description">
     <Header client:load/>
-	<Hero img="./assets/img/apartment3.jpg" title="Nuestras Unidades" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo nostrum veritatis voluptatem a, dolor nobis voluptates. Nisi, esse. Tempore quibusdam eos praesentium itaque delectus commodi ex impedit sint?"/>
+	<Hero 
+	img="./assets/img/apartment3.jpg" 
+	title="Nuestras Unidades" 
+	text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nemo nostrum veritatis voluptatem a, dolor nobis voluptates. Nisi, esse. Tempore quibusdam eos praesentium itaque delectus commodi ex impedit sint?"
+	/>
+	<Stats/>
 	<UnidadesSection/>
 </Layout>
 

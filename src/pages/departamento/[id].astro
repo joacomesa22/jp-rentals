@@ -7,6 +7,7 @@ import DeptoInfo from "../../sections/departamento/DeptoInfo.astro"
 import AirbnbBtn from "../../components/AirbnbBtn.astro";
 import Slider from "../../components/Slider"
 import Header from "../../components/Header"
+import Loader from "../../components/Loader.astro";
 
 const {id} = Astro.params
 let depto
@@ -31,4 +32,5 @@ export const getStaticPaths = (() => {
             <AirbnbBtn link={depto.link}>
         </div>
     </section>
+    <Loader/>
 </Layout>
